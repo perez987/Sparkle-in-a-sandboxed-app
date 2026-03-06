@@ -33,7 +33,14 @@ struct ContentView: View {
             .controlSize(.large)
         }
         .padding(32)
-        .frame(width: 360, height: 280)
+        .frame(
+            minWidth: 380,
+            idealWidth: 380,
+            maxWidth: 380,
+            minHeight: 380,
+            idealHeight: 380,
+            maxHeight: 380
+        )
         .onAppear {
             let info = Bundle.main.infoDictionary
             appVersion = info?["CFBundleShortVersionString"] as? String ?? "Unknown"

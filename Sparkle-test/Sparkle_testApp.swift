@@ -27,6 +27,7 @@ struct Sparkle_testApp: App {
                 checkForUpdatesViewModel: checkForUpdatesViewModel
             )
         }
+        .windowResizability(.contentSize)
         .commands {
             // Add "Check for Updates…" to the application menu
             CommandGroup(after: .appInfo) {
