@@ -1,6 +1,6 @@
 # Sparkle updater system in a SwiftUI sandboxed app
 
-Testing site to learn how to implement Sparkle updater system in **Sparkle-test**, a sandboxed SwiftUI macOS app that uses the Sparkle update framework (v2.x).
+Testing site to learn how to implement Sparkle updater system in a sandboxed SwiftUI macOS app that uses the Sparkle update framework (v2.x).
 
 Deploying Sparkle in an Xcode SwiftUI project without sandboxing is usually quite straightforward and generates few issues.
 
