@@ -2,18 +2,14 @@
 
 This file describes everything you need to do after cloning this repository to build and run **Sparkle-test**, a sandboxed SwiftUI macOS app that uses the [Sparkle](https://sparkle-project.org/) update framework (v2.x).
 
----
-
 ## 1. Prerequisites
 
 | Requirement | Version |
 |---|---|
-| Xcode | 14 or later (15+ recommended) |
-| macOS | 12 Monterey or later (build host) |
+| Xcode | 15+ |
+| macOS | 13 Sonoma or later (build host) |
 | Apple Developer Account | Required for code signing |
 | Sparkle | 2.x — added via Swift Package Manager |
-
----
 
 ## 2. Open the Project in Xcode
 
@@ -27,19 +23,24 @@ This file describes everything you need to do after cloning this repository to b
 1. In Xcode, select the **Sparkle-test** project in the Project Navigator.
 2. Select the **Sparkle-test** target → **Signing & Capabilities**.
 3. Under **Signing**:
-   - Set **Team** to your Apple ID / development team.
+   - Set **Team** to your Apple ID.
    - Keep **Automatically manage signing** enabled.
-   - The **Bundle Identifier** is pre-set to `com.example.Sparkle-test`.  
-     Change it to something unique, e.g. `com.yourname.Sparkle-test`.
+   - Set **Sign to Run Locally**
+   - The **Bundle Identifier** is pre-set to `com.perez987.Sparkle-test`.
 
-**About "ad-hoc" signing with your Apple ID:**  
+### About "ad-hoc" signing with your Apple ID  
 
-For running on your own Mac (outside App Store / Gatekeeper), sign with your personal *Apple Development* certificate. This requires a free or paid Apple Developer account.  
-You do **not** need a Developer ID certificate unless you distribute to other machines.
+For other users running this app (outside App Store), they do **not** need a Developer ID certificate but get a Gatekeeper warning the first time they run the app.
+
+In pre-Sequoia versions, the Gatekeeper warning for files downloaded from the Internet had a simple solution: accepting the warning when opening the file or right-clicking on the file >> Open.
+
+But in Sequoia and Tahoe, the warning is more shocking and might upset the user. The fix is to remove the `com.apple.quarantine` attribute so that, from this point on, you can run the app without issues.
+
+You can read about this in [APP is damaged and can't be opened](APP-damaged.md).
 
 ## 4. Generate Sparkle EdDSA Keys
 
-Sparkle 2 uses EdDSA (Ed25519) signatures to verify update packages.  
+Sparkle 2 uses EdDSA (`Ed25519`) signatures to verify update packages.  
 You must generate a key pair and add the **public key** to `Info.plist`.
 
 ### Steps
@@ -53,7 +54,7 @@ You must generate a key pair and add the **public key** to `Info.plist`.
 
 The tool will:
 
-- Print a **private key** — save it safely (e.g. in macOS Keychain). **Never commit it.**
+- Print a **private key** — by default, Sparkle saves it in the macOS Keychain. **Never commit it.**
 - Print a **public key** (Base64 string).
 
 ### Add the Public Key to Info.plist
@@ -79,13 +80,13 @@ Sparkle checks a remote XML feed ("appcast") to discover new versions.
   <channel>
     <title>Sparkle-test</title>
     <item>
-      <title>Version 1.1</title>
-      <sparkle:version>2</sparkle:version>
-      <sparkle:shortVersionString>1.1</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>12.0</sparkle:minimumSystemVersion>
+      <title>Version 1.0.1</title>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <pubDate>Fri, 01 Jan 2025 12:00:00 +0000</pubDate>
       <enclosure
-        url="https://your-server.example.com/Sparkle-test-1.1.zip"
+        url="https://github.com/perez987/Sparkle-test/releases/download/1.0.1/Sparkle-test-1.0.1.zip"
         sparkle:edSignature="YOUR_ED_SIGNATURE"
         length="1234567"
         type="application/octet-stream"
@@ -103,12 +104,12 @@ zip -r Sparkle-test-1.1.zip Sparkle-test.app
 
 # Sign it with your private key using Sparkle's sign_update tool
 ./bin/sign_update Sparkle-test-1.1.zip
-# → prints the sparkle:edSignature and size in bytes values to paste into the appcast
+# → prints the size (in bytes) and the sparkle:edSignature to paste into the appcast (sparkle:edSignature and length)
 ```
 
 ### 5c. Host the Appcast
 
-Upload `appcast.xml` (and the `.zip` file) to any HTTPS-accessible web server.
+Upload `appcast.xml` to the root of the repository and the `.zip` file to the releases page.
 
 ### 5d. Update Info.plist
 
@@ -192,12 +193,11 @@ Sparkle-test/
 
 | Key | Description |
 |---|---|
-| `SUFeedURL` | **Required.** HTTPS URL to your `appcast.xml` |
-| `SUPublicEDKey` | **Recommended.** Base64 Ed25519 public key for update verification |
-| `SUEnableInstallerLauncherService` | **Required for sandbox.** Allows Sparkle to launch its installer XPC service |
+| `SUFeedURL` | **Required**: HTTPS URL to your `appcast.xml` |
+| `SUPublicEDKey` | **Required for production**: Base64 Ed25519 public key for update verification |
+| `SUEnableInstallerLauncherService` | **Required for sandbox**: Allows Sparkle to launch its installer XPC service |
 | `SUEnableSystemProfiling` | Set `false` to disable anonymous analytics |
 | `SUScheduledCheckInterval` | Seconds between automatic update checks (default: 86400 = 1 day) |
-
 
 ## 12. Troubleshooting
 
@@ -208,7 +208,7 @@ Sparkle-test/
 | Update download fails silently | Missing `network.client` entitlement or wrong URL | Check entitlements; verify appcast URL is HTTPS |
 | "Update can't be installed" | Missing `SUEnableInstallerLauncherService` | Add/verify that key is `true` in `Info.plist` |
 | Signature verification fails | Wrong or missing `SUPublicEDKey` | Re-generate keys and update `Info.plist` |
-| App not opening on another Mac | Not notarized | Right-click the app → Open; or notarize for distribution |
+| App not opening on another Mac | Not notarized | - Right-click the app → Open<br>- Remove quarantine atribute<br>- If Apple Developer account, notarize for distribution |
 
 ## References
 
