@@ -216,3 +216,6 @@ Sparkle-test/
 - [Sparkle Sandboxing Guide](https://sparkle-project.org/documentation/sandboxing/)
 - [Sparkle Publishing Updates](https://sparkle-project.org/documentation/publishing/)
 - [Sparkle GitHub Releases](https://github.com/sparkle-project/Sparkle/releases)
+
+---
+🌐 [Versión en español](HOWTO-Sparkle-es.md)
