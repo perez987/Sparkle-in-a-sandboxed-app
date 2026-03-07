@@ -63,7 +63,7 @@ Add this to the `Info.plist` file:
 
 ```xml
 <key>SUPublicEDKey</key>
-<string>YOUR_BASE64_PUBLIC_KEY</string>
+<string>BASE64_PUBLIC_KEY</string>
 ```
 
 **Important:** Without the correct `SUPublicEDKey`, Sparkle will refuse to install updates.
