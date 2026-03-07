@@ -35,6 +35,7 @@ struct Sparkle_testApp: App {
                     checkForUpdatesViewModel: checkForUpdatesViewModel,
                     updater: updaterController.updater
                 )
+                .keyboardShortcut("u", modifiers: [.command])
             }
         }
     }

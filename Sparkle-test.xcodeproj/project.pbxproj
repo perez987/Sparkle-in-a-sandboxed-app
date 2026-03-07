@@ -36,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D9249AE52F5CA38E00E75A5D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF0000000000000000000002 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D9249AE62F5CA39B00E75A5D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF0000000000000000000003 /* CheckForUpdatesViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		GG0000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
@@ -47,12 +63,12 @@
 		GG0000000000000000000002 /* Sparkle-test */ = {
 			isa = PBXGroup;
 			children = (
-				FF0000000000000000000001 /* Sparkle_testApp.swift */,
-				FF0000000000000000000002 /* ContentView.swift */,
-				FF0000000000000000000003 /* CheckForUpdatesViewModel.swift */,
 				FF0000000000000000000006 /* Assets.xcassets */,
 				FF0000000000000000000004 /* Info.plist */,
+				D9249AE62F5CA39B00E75A5D /* Model */,
+				FF0000000000000000000001 /* Sparkle_testApp.swift */,
 				FF0000000000000000000005 /* Sparkle-test.entitlements */,
+				D9249AE52F5CA38E00E75A5D /* Views */,
 			);
 			path = "Sparkle-test";
 			sourceTree = "<group>";
