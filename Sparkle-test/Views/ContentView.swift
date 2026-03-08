@@ -2,8 +2,6 @@ import SwiftUI
 import Sparkle
 
 struct ContentView: View {
-    let updater: SPUUpdater
-    @ObservedObject var checkForUpdatesViewModel: CheckForUpdatesViewModel
 
     @State private var appVersion: String = ""
     @State private var buildNumber: String = ""
@@ -24,22 +22,15 @@ struct ContentView: View {
                 .font(.title3)
                 .foregroundColor(.secondary)
                 .textSelection(.enabled)
-
-            Button(NSLocalizedString("Check for Updates…", comment: "Menu item to check for app updates")) {
-                updater.checkForUpdates()
-                }
-            .disabled(!checkForUpdatesViewModel.canCheckForUpdates)
-            .buttonStyle(.borderedProminent)
-            .controlSize(.large)
-        }
+            }
         .padding(32)
         .frame(
-            minWidth: 380,
-            idealWidth: 380,
-            maxWidth: 380,
-            minHeight: 380,
-            idealHeight: 380,
-            maxHeight: 380
+            minWidth: 300,
+            idealWidth: 300,
+            maxWidth: 300,
+            minHeight: 300,
+            idealHeight: 300,
+            maxHeight: 300
         )
         .onAppear {
             let info = Bundle.main.infoDictionary

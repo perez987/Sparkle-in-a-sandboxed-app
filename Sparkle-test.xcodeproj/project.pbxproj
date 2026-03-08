@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		BB0000000000000000000001 /* Sparkle_testApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000001 /* Sparkle_testApp.swift */; };
 		BB0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000002 /* ContentView.swift */; };
-		BB0000000000000000000003 /* CheckForUpdatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000003 /* CheckForUpdatesViewModel.swift */; };
 		BB0000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000006 /* Assets.xcassets */; };
 		BB0000000000000000000005 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = SP0000000000000000000002 /* Sparkle */; };
+		D9C9CE392F5D8AFB00DEEC06 /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
 		FF0000000000000000000001 /* Sparkle_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparkle_testApp.swift; sourceTree = "<group>"; };
 		FF0000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		FF0000000000000000000003 /* CheckForUpdatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckForUpdatesViewModel.swift; sourceTree = "<group>"; };
 		FF0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF0000000000000000000005 /* Sparkle-test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sparkle-test.entitlements"; sourceTree = "<group>"; };
 		FF0000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		D9249AE62F5CA39B00E75A5D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FF0000000000000000000003 /* CheckForUpdatesViewModel.swift */,
+				D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C9CE392F5D8AFB00DEEC06 /* UpdateController.swift in Sources */,
 				BB0000000000000000000001 /* Sparkle_testApp.swift in Sources */,
 				BB0000000000000000000002 /* ContentView.swift in Sources */,
-				BB0000000000000000000003 /* CheckForUpdatesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
