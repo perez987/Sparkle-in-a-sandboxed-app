@@ -166,8 +166,8 @@ The `mach-lookup` exceptions allow the sandboxed app to find and communicate wit
 
 1. Select the **Sparkle-test** scheme and your Mac as the destination.
 2. Press **⌘R** to build and run.
-3. The app window shows the current version and a **Check for Updates…** button.
-4. The button is disabled until Sparkle finishes its startup check; it becomes enabled after a few seconds.
+3. The app window shows the current version (marketing version and build number).
+4. A **Check for Updates…** menu item is available in the application menu (also reachable via **⌘U**). It is disabled until Sparkle finishes its startup check; it becomes enabled after a few seconds.
 
 ## 8. Testing the Update Flow (End-to-End)
 
@@ -198,9 +198,11 @@ Sparkle-test/
 ├── Sparkle-test.xcodeproj/             Xcode project file
 │   └── project.pbxproj
 ├── Sparkle-test/                       Swift source & resources
-│   ├── Sparkle_testApp.swift           App entry point; initialises SPUStandardUpdaterController
-│   ├── ContentView.swift               Main window: version text + Check for Updates button
-│   ├── CheckForUpdatesViewModel.swift  ObservableObject that reflects canCheckForUpdates
+│   ├── Sparkle_testApp.swift           App entry point; creates UpdaterController and adds "Check for Updates…" to the app menu
+│   ├── Views/
+│   │   └── ContentView.swift           Main window: app icon, title, and version/build number text
+│   ├── Model/
+│   │   └── UpdateController.swift      ObservableObject (UpdaterController) that wraps SPUStandardUpdaterController and publishes canCheckForUpdates
 │   ├── Info.plist                      App metadata + Sparkle keys (SUFeedURL, SUPublicEDKey…)
 │   ├── Sparkle-test.entitlements       Sandbox + network + Sparkle mach exceptions
 │   └── Assets.xcassets/                App icon + accent colour
@@ -215,7 +217,7 @@ Sparkle-test/
 | `SUPublicEDKey` | **Required for production**: Base64 EdDSA public key for update verification |
 | `SUEnableInstallerLauncherService` | **Required for sandbox**: Allows Sparkle to launch its installer XPC service |
 | `SUEnableSystemProfiling` | Set `false` to disable anonymous analytics |
-| `SUScheduledCheckInterval` | Seconds between automatic update checks (default: 86400 = 1 day) |
+| `SUScheduledCheckInterval` | Seconds between automatic update checks (set to 604800 = 1 week in this project) |
 
 ## 12. Troubleshooting
 

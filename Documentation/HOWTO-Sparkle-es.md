@@ -166,8 +166,8 @@ Las excepciones `mach-lookup` permiten a la app con `sandbox` encontrar y comuni
 
 1. Selecciona el esquema **Sparkle-test** y tu Mac como destino.
 2. Pulsa **⌘R** para compilar y ejecutar.
-3. La ventana de la app muestra la versión actual y un botón **Check for Updates…**.
-4. El botón está desactivado hasta que Sparkle termina su comprobación inicial; se activa después de unos segundos.
+3. La ventana de la app muestra la versión actual (versión de marketing y número de compilación).
+4. Un ítem **Check for Updates…** está disponible en el menú de la aplicación (también accesible con **⌘U**). Está desactivado hasta que Sparkle termina su comprobación inicial; se activa después de unos segundos.
 
 ## 8. Probar el flujo de actualización
 
@@ -198,9 +198,11 @@ Sparkle-test/
 ├── Sparkle-test.xcodeproj/             Archivo de proyecto Xcode)
 │   └── project.pbxproj
 ├── Sparkle-test/                       Código fuente Swift y recursos
-│   ├── Sparkle_testApp.swift           Punto de entrada de la app; inicializa SPUStandardUpdaterController
-│   ├── ContentView.swift               Ventana principal: texto de versión + botón Check for Updates
-│   ├── CheckForUpdatesViewModel.swift  ObservableObject que refleja canCheckForUpdates
+│   ├── Sparkle_testApp.swift           Punto de entrada de la app; crea UpdaterController y añade "Check for Updates…" al menú de la app
+│   ├── Views/
+│   │   └── ContentView.swift           Ventana principal: icono, título y texto de versión/compilación
+│   ├── Model/
+│   │   └── UpdateController.swift      ObservableObject (UpdaterController) que envuelve SPUStandardUpdaterController y publica canCheckForUpdates
 │   ├── Info.plist                      Metadatos de la app + claves de Sparkle (SUFeedURL, SUPublicEDKey…)
 │   ├── Sparkle-test.entitlements       Sandbox + red + excepciones de Sparkle
 │   └── Assets.xcassets/                Icono de la app + color de énfasis
@@ -215,7 +217,7 @@ Sparkle-test/
 | `SUPublicEDKey` | **Obligatorio en producción**: Clave pública EdDSA en Base64 para verificación de actualizaciones |
 | `SUEnableInstallerLauncherService` | **Obligatorio con sandbox**: Permite a Sparkle lanzar su servicio instalador XPC |
 | `SUEnableSystemProfiling` | Establece `false` para desactivar el análisis anónimo |
-| `SUScheduledCheckInterval` | Segundos entre comprobaciones automáticas de actualizaciones (predeterminado: 86400 = 1 día) |
+| `SUScheduledCheckInterval` | Segundos entre comprobaciones automáticas de actualizaciones (configurado a 604800 = 1 semana en este proyecto) |
 
 ## 12. Solución de problemas
 
