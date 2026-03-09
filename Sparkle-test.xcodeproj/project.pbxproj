@@ -12,11 +12,17 @@
 		BB0000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000006 /* Assets.xcassets */; };
 		BB0000000000000000000005 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = SP0000000000000000000002 /* Sparkle */; };
 		D9C9CE392F5D8AFB00DEEC06 /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */; };
+		LL0000000000000000000001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = VG0000000000000000000001 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
 		FF0000000000000000000001 /* Sparkle_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparkle_testApp.swift; sourceTree = "<group>"; };
+		LO0000000000000000000001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		LO0000000000000000000002 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		LO0000000000000000000003 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		LO0000000000000000000004 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		LO0000000000000000000005 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FF0000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF0000000000000000000005 /* Sparkle-test.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sparkle-test.entitlements"; sourceTree = "<group>"; };
@@ -34,6 +40,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		VG0000000000000000000001 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				LO0000000000000000000001 /* en */,
+				LO0000000000000000000002 /* es */,
+				LO0000000000000000000003 /* de */,
+				LO0000000000000000000004 /* it */,
+				LO0000000000000000000005 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin PBXGroup section */
 		D9249AE52F5CA38E00E75A5D /* Views */ = {
@@ -65,6 +86,7 @@
 			children = (
 				FF0000000000000000000006 /* Assets.xcassets */,
 				FF0000000000000000000004 /* Info.plist */,
+				VG0000000000000000000001 /* Localizable.strings */,
 				D9249AE62F5CA39B00E75A5D /* Model */,
 				FF0000000000000000000001 /* Sparkle_testApp.swift */,
 				FF0000000000000000000005 /* Sparkle-test.entitlements */,
@@ -126,6 +148,10 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
+				de,
+				it,
+				fr,
 			);
 			mainGroup = GG0000000000000000000001;
 			packageReferences = (
@@ -146,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB0000000000000000000004 /* Assets.xcassets in Resources */,
+				LL0000000000000000000001 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

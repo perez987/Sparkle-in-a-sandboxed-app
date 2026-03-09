@@ -1,0 +1,8 @@
+/* Menu item to check for app updates */
+"Check for Updates..." = "Check for Updates...";
+
+/* App title displayed in the main window */
+"Sparkle Test" = "Sparkle Test";
+
+/* Version label showing marketing version and build number */
+"Version %@ (%@)" = "Version %@ (%@)";
