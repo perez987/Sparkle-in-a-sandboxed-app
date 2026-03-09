@@ -11,11 +11,13 @@
 		BB0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000002 /* ContentView.swift */; };
 		BB0000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF0000000000000000000006 /* Assets.xcassets */; };
 		BB0000000000000000000005 /* Sparkle in Frameworks */ = {isa = PBXBuildFile; productRef = SP0000000000000000000002 /* Sparkle */; };
+		D99BBE552F5F0A710017B227 /* LanguageSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99BBE542F5F0A710017B227 /* LanguageSelectorView.swift */; };
 		D9C9CE392F5D8AFB00DEEC06 /* UpdateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */; };
 		LL0000000000000000000001 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = VG0000000000000000000001 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D99BBE542F5F0A710017B227 /* LanguageSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectorView.swift; sourceTree = "<group>"; };
 		D9C9CE382F5D8AFB00DEEC06 /* UpdateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateController.swift; sourceTree = "<group>"; };
 		FF0000000000000000000001 /* Sparkle_testApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sparkle_testApp.swift; sourceTree = "<group>"; };
 		FF0000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		D99BBE562F5F0A7A0017B227 /* Languages */ = {
+			isa = PBXGroup;
+			children = (
+				D99BBE542F5F0A710017B227 /* LanguageSelectorView.swift */,
+				VG0000000000000000000001 /* Localizable.strings */,
+			);
+			path = Languages;
+			sourceTree = "<group>";
+		};
 		GG0000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +80,9 @@
 		GG0000000000000000000002 /* Sparkle-test */ = {
 			isa = PBXGroup;
 			children = (
+				D99BBE562F5F0A7A0017B227 /* Languages */,
 				FF0000000000000000000006 /* Assets.xcassets */,
 				FF0000000000000000000004 /* Info.plist */,
-				VG0000000000000000000001 /* Localizable.strings */,
 				D9249AE62F5CA39B00E75A5D /* Model */,
 				FF0000000000000000000001 /* Sparkle_testApp.swift */,
 				FF0000000000000000000005 /* Sparkle-test.entitlements */,
@@ -169,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C9CE392F5D8AFB00DEEC06 /* UpdateController.swift in Sources */,
+				D99BBE552F5F0A710017B227 /* LanguageSelectorView.swift in Sources */,
 				BB0000000000000000000001 /* Sparkle_testApp.swift in Sources */,
 				BB0000000000000000000002 /* ContentView.swift in Sources */,
 			);
@@ -205,6 +217,7 @@
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sparkle-test/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -231,6 +244,7 @@
 				DEVELOPMENT_TEAM = ER43ZD2S4U;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Sparkle-test/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

@@ -1,0 +1,16 @@
+/* Updates */
+"Check for Updates..." = "Nach Aktualisierungen suchen...";
+
+/* Main window */
+"Sparkle Test" = "Sparkle Test";
+"Version %@ (%@)" = "Version %@ (%@)";
+
+/* Language Menu */
+"Language menu" = "Sprache";
+"Select Language menu item" = "Sprache Auswählen...";
+"Language selector title" = "Sprache Auswählen";
+"Accept" = "Akzeptieren";
+"Cancel" = "Abbrechen";
+"OK" = "OK";
+"Language changed alert title" = "Sprache geändert";
+"Language changed message" = "Bitte starten Sie die Anwendung neu,\num die neue Sprache anzuwenden.";
