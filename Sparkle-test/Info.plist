@@ -33,7 +33,7 @@
 	<key>SUEnableSystemProfiling</key>
 	<false/>
 	<key>SUFeedURL</key>
-	<string>https://raw.githubusercontent.com/perez987/Sparkle-test/main/appcast.xml</string>
+	<string>https://raw.githubusercontent.com/perez987/Sparkle-in-sandboxed-app/main/appcast.xml</string>
 	<key>SUPublicEDKey</key>
 	<string>ZlKWZcBX5/V65EwhgJe0G+veSzYUiYrpJZL9dLE8vjw=</string>
 	<key>SUScheduledCheckInterval</key>

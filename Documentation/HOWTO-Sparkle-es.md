@@ -1,4 +1,4 @@
-# Sparkle-test: Instrucciones de configuración
+# Sparkle en una app aislada (*sandboxed*)
 
 Este archivo describe lo que necesitas hacer después de clonar este repositorio para compilar y ejecutar **Sparkle-test**, una app hecha en SwiftUI para macOS con aislamiento (`sandbox`) que utiliza el *framework* de actualizaciones Sparkle (v2.x).
 
@@ -86,7 +86,7 @@ Sparkle consulta un *feed* XML remoto ("appcast") para descubrir nuevas versione
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <pubDate>Tue, 17 Mar 2026 12:00:00 +0000</pubDate>
       <enclosure
-        url="https://github.com/perez987/Sparkle-in-a-sandboxed-app/releases/download/1.0.1/Sparkle-test-1.0.1.zip"
+        url="https://github.com/perez987/Sparkle-in-sandboxed-app/releases/download/1.0.1/Sparkle-test-1.0.1.zip"
         sparkle:edSignature="FIRMA_EdDSA"
         length="1234567"
         type="application/octet-stream"
@@ -136,7 +136,7 @@ Rellena el valor de la propiedad `SUFeedURL` en `Info.plist`:
 
 ```xml
 <key>SUFeedURL</key>
-<string>https://raw.githubusercontent.com/perez987/Sparkle-in-a-sandboxed-app/main/appcast.xml</string>
+<string>https://raw.githubusercontent.com/perez987/Sparkle-in-sandboxed-app/main/appcast.xml</string>
 ```
 
 ## 6. Explicación del archivo Entitlements

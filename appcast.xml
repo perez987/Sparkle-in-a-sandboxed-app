@@ -9,9 +9,9 @@
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <pubDate>Tue, 17 Mar 2026 16:080:00 +0000</pubDate>
       <enclosure
-        url="https://github.com/perez987/Sparkle-in-a-sandboxed-app/releases/download/1.1.0/Sparkle-test-1.1.0.zip"
-        sparkle:edSignature="O0/UZoeG7BfpQyo+p5e2dBBoOYsyFAlWDnL6T/b8IgWbUi/Wuu/g0mkRCLrB08vVS057aeT1J6Vcux9ZZ/jpCw=="
-        length="1453341"
+        url="https://github.com/perez987/Sparkle-in-sandboxed-app/releases/download/1.1.0/Sparkle-test-1.1.0.zip"
+        sparkle:edSignature="ceNil7hwBzl8lDWPLgI9apekgNcKF38ZQPy+ee64lXjUnF2CQDFPFdRcD750dhR6E6PyyevN6IbY4mzjtsMtCA=="
+        length="1453362"
         type="application/octet-stream"
       />
     </item>

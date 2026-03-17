@@ -1,4 +1,4 @@
-# Sparkle-in-a-sandboxed-app: Setup Instructions
+# Sparkle updater in a sandboxed adpp
 
 This file describes everything you need to do after cloning this repository to build and run **Sparkle-test**, a sandboxed SwiftUI macOS app that uses the Sparkle update framework (v2.x). This example will help you add the Sparkle updater to a SwiftUI sandboxed app.
 
@@ -86,7 +86,7 @@ Sparkle checks a remote XML feed ("appcast") to discover new versions.
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
       <pubDate>Sat, 14 Mar 2026 12:45:43 +0000</pubDate>
       <enclosure
-        url="https://github.com/perez987/Sparkle-in-a-sandboxed-app/download/1.0.1/Sparkle-test-1.0.1.zip"
+        url="https://github.com/perez987/Sparkle-in-sandboxed-app/download/1.0.1/Sparkle-test-1.0.1.zip"
         sparkle:edSignature="ED_SIGNATURE"
         length="1234567"
         type="application/octet-stream"
@@ -136,7 +136,7 @@ Replace the placeholder `SUFeedURL` in `Sparkle-test/Info.plist`:
 
 ```xml
 <key>SUFeedURL</key>
-<string>https://raw.githubusercontent.com/perez987/Sparkle-in-a-sandboxed-app/main/appcast.xml</string>
+<string>https://raw.githubusercontent.com/perez987/Sparkle-in-sandboxed-app/main/appcast.xml</string>
 ```
 
 ## 6. Sandbox Entitlements Explained
