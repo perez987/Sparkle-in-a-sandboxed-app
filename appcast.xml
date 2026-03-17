@@ -7,9 +7,9 @@
       <sparkle:version>8</sparkle:version>
       <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <pubDate>Fri, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Mar 2026 16:080:00 +0000</pubDate>
       <enclosure
-        url="https://github.com/perez987/Sparkle-test/releases/download/1.1.0/Sparkle-test-1.1.0.zip"
+        url="https://github.com/perez987/Sparkle-in-a-sandboxed-app/releases/download/1.1.0/Sparkle-test-1.1.0.zip"
         sparkle:edSignature="O0/UZoeG7BfpQyo+p5e2dBBoOYsyFAlWDnL6T/b8IgWbUi/Wuu/g0mkRCLrB08vVS057aeT1J6Vcux9ZZ/jpCw=="
         length="1453341"
         type="application/octet-stream"

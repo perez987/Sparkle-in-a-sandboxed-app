@@ -18,6 +18,3 @@ Project and app requirements were:
    - outgoing connections allowed
 
 Detailed instructions are available in the [HOWTO-Sparkle](Documentation/HOWTO-Sparkle.md) file
-
----
-🌐 [Versión en español](README-es.md)

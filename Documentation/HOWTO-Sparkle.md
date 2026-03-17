@@ -239,4 +239,4 @@ Sparkle-test/
 - [Sparkle GitHub Releases](https://github.com/sparkle-project/Sparkle/releases)
 
 ---
-🌐 [Versión en español](HOWTO-Sparkle-es.md)
+🇪🇸 [Spanish version](HOWTO-Sparkle-es.md)

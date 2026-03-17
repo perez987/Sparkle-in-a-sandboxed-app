@@ -84,9 +84,9 @@ Sparkle consulta un *feed* XML remoto ("appcast") para descubrir nuevas versione
       <sparkle:version>4</sparkle:version>
       <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <pubDate>Fri, 01 Jan 2025 12:00:00 +0000</pubDate>
+      <pubDate>Tue, 17 Mar 2026 12:00:00 +0000</pubDate>
       <enclosure
-        url="https://github.com/perez987/Sparkle-test/releases/download/1.0.1/Sparkle-test-1.0.1.zip"
+        url="https://github.com/perez987/Sparkle-in-a-sandboxed-app/releases/download/1.0.1/Sparkle-test-1.0.1.zip"
         sparkle:edSignature="FIRMA_EdDSA"
         length="1234567"
         type="application/octet-stream"
@@ -108,6 +108,7 @@ Sparkle consulta un *feed* XML remoto ("appcast") para descubrir nuevas versione
 	- `url` -> enlace al archivo ZIP
 	- `sparkle:version` -> número de compilación del proyecto(`CURRENT_PROJECT_VERSION` = `CFBundleVersion`)
 	- `sparkle:shortVersionString`-> número de versión de la app (`MARKETING_VERSION`)
+	- `pubDate`-> fecha de publicación
 	- `length` -> tamaño del ZIP
 	- `sparkle:edSignature` -> firma pública EdDSA para verificar la integridad de la actualización
 	- `type` -> "application/octet-stream"
@@ -135,7 +136,7 @@ Rellena el valor de la propiedad `SUFeedURL` en `Info.plist`:
 
 ```xml
 <key>SUFeedURL</key>
-<string>https://raw.githubusercontent.com/perez987/Sparkle-test/main/appcast.xml</string>
+<string>https://raw.githubusercontent.com/perez987/Sparkle-in-a-sandboxed-app/main/appcast.xml</string>
 ```
 
 ## 6. Explicación del archivo Entitlements
@@ -238,4 +239,4 @@ Sparkle-test/
 - [Releases de Sparkle en GitHub](https://github.com/sparkle-project/Sparkle/releases)
 
 ---
-🌐 [English version](HOWTO-Sparkle.md)
+🇬🇧 [Versión en inglés](HOWTO-Sparkle.md)
